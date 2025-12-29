@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Weheacreativestudio </title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+     <!-- SEO Base -->
+  <title> Weheacreativestudio </title>
+  <meta name="description" content="Scopri Weheacreativestudio">
+  <meta name="keywords" content="Handcrafted in Apulia">
+  
+  <!-- Open Graph (Facebook / WhatsApp / LinkedIn) -->
+  <meta property="og:title" content="Weheacreativestudio">
+  <meta property="og:description" content="Scopri Weheacreativestudio">
+  <meta property="og:image" content="https://weheacreativestudio.com/favicon.png?v=3">
+  <meta property="og:url" content="https://weheacreativestudio.com">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Weheacreativestudio">
+  <meta name="twitter:description" content="Scopri Weheacreativestudio">
+  <meta name="twitter:image" content="https://weheacreativestudio.com/favicon1.png?v=3">
+
+   <!-- PNG moderni -->
+      <link rel="icon" href="/favicon.png?v=3" type="image/png" sizes="32x32">
+     <link rel="icon" href="/favicon.png?v=3" type="image/png" sizes="16x16">
+
+     <!-- ICO fallback -->
+      <link rel="shortcut icon" href="/favicon1.ico?v=3" type="image/x-icon">
+
+     <!-- Apple Touch (Safari / iOS) -->
+    <link rel="apple-touch-icon" href="/favicon.png?v=3">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #000000;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(0,0,0,0.1), rgba(50,50,50,0.1), rgba(100,100,100,0.1));
+            animation: overlayEffect 10s infinite;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .container {
+            position: relative;
+            text-align: center;
+            background: transparent;
+            padding: 40px;
+            max-width: 90%;
+            transition: transform 0.3s ease;
+            z-index: 2;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container:hover {
+            transform: scale(1.02);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #000000;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            color: #333333;
+        }
+
+
+
+        /* Animazione rimossa */
+
+        input[type="email"] {
+            padding: 12px 20px;
+            width: 80%;
+            max-width: 300px;
+            border: 1px solid rgba(255,255,255,0.6);
+            border-radius: 28px;
+            font-size: 16px;
+            background-color: rgba(0,0,0,0.6);
+            color: #fff;
+            margin: 0;
+            line-height: 1;
+            transition: all 0.2s ease;
+        }
+
+        input[type="email"]:focus {
+            outline: none;
+            border-color: #ffffff;
+            box-shadow: 0 0 0 2px rgba(255,255,255,0.2);
+            background-color: rgba(0,0,0,0.7);
+        }
+
+        input[type="submit"] {
+            padding: 12px 30px;
+            background: rgba(0,0,0,0.6);
+            color: #ffffff;
+            border: 1px solid rgba(255,255,255,0.6);
+            border-radius: 28px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 0;
+            width: auto;
+            max-width: 220px;
+            line-height: 1;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.2s ease;
+        }
+
+        input[type="submit"]:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: #ffffff;
+        }
+
+        .social-icons {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-icons a {
+            font-size: 28px;
+            transition: transform 0.3s ease;
+            color: #ffffff;
+        }
+        
+        @media (max-width: 768px) {
+            .social-icons a {
+                font-size: 22px;
+            }
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.2) rotate(360deg);
+        }
+
+        #bgVideo {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: 0;
+            object-fit: cover;
+            filter: brightness(0.35) contrast(1.05) saturate(0.85);
+            pointer-events: none;
+        }
+
+        .top-logo {
+            position: fixed;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+            width: 100%;
+            max-width: 300px;
+            text-align: center;
+            pointer-events: none;
+        }
+
+        .form-inline {
+            display: flex;
+            align-items: center;
+            height: 34px;
+            gap: 0;
+            font-size: 14px;
+            color: rgba(255,255,255,0.6);
+        }
+
+        .form-inline input[type="email"] {
+            width: 200px;
+            height: 34px;
+            background: #09090b;
+            color: #f4f4f5;
+            padding: 0 12px;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+            outline: none;
+            transition: all 0.15s ease-in-out;
+            box-sizing: border-box;
+        }
+
+        .form-inline input[type="email"]::placeholder {
+            color: rgba(244,244,245,0.6);
+        }
+
+        .form-inline input[type="email"]:focus {
+            border-color: rgba(255,255,255,0.2);
+            box-shadow: 0 0 0 2px rgba(63,63,70,0.8);
+            background: #0b0b0e;
+        }
+
+        .form-inline input[type="submit"] {
+            height: 34px;
+            padding: 0 12px;
+            color: #f4f4f5;
+            background: transparent;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            border-right: 1px solid rgba(255,255,255,0.1);
+            border-left: none;
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+            cursor: pointer;
+            transition: all 0.15s ease-in-out;
+            box-sizing: border-box;
+        }
+
+        .form-inline input[type="submit"]:hover {
+            background: rgba(39,39,42,0.4);
+        }
+
+        .form-minimal {
+            display: inline-flex;
+            align-items: center;
+            gap: 0;
+            height: 36px;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            color: rgba(255,255,255,0.6);
+        }
+
+        .form-minimal input[type="email"] {
+            background: transparent;
+            color: #ffffff;
+            border: none;
+            outline: none;
+            height: 36px;
+            min-width: 220px;
+            padding: 0 10px 0 0;
+            font-size: 14px;
+        }
+
+        .form-minimal input[type="email"]::placeholder {
+            color: rgba(255,255,255,0.6);
+        }
+
+        .form-minimal input[type="email"]:focus {
+            box-shadow: none;
+            border: none;
+        }
+
+        .form-minimal input[type="submit"] {
+            background: transparent;
+            color: #ffffff;
+            border: none;
+            outline: none;
+            height: 36px;
+            padding: 0 10px;
+            font-size: 14px;
+            cursor: pointer;
+            letter-spacing: 0.5px;
+        }
+
+        .form-minimal input[type="submit"]:hover {
+            opacity: 0.8;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 10px;
+            width: 100%;
+            color: #ffffff;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+            text-align: center;
+            z-index: 2;
+            font-size: 0.5em;
+        }
+
+        footer a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #cccccc;
+        }
+
+        .thank-you-message {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.6);
+            padding: 40px;
+            border-radius: 15px;
+            border: 2px solid #ffffff;
+            box-shadow: 0 8px 32px rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(1px);
+            font-size: 1.2em;
+            color: #000000;
+            text-align: center;
+            z-index: 999;
+            display: none;
+            animation: slideIn 0.5s ease-out;
+            max-width: 90%;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translate(-50%, -60%);
+            }
+            to {
+                opacity: 1;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        .unmute-btn {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 2001;
+            width: 40px;
+            height: 40px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0,0,0,0.6);
+            color: #ffffff;
+            border: 1px solid rgba(255,255,255,0.6);
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .unmute-btn:hover {
+            background: rgba(255,255,255,0.1);
+        }
+        .unmute-btn i {
+            font-size: 18px;
+            line-height: 1;
+        }
+
+        /* Cookie Banner Styles */
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 8px 15px;
+            z-index: 1000;
+            transform: translateY(100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .cookie-banner.show {
+            transform: translateY(0);
+        }
+        
+        .cookie-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .cookie-content p {
+            margin: 0;
+            flex: 1;
+            min-width: 250px;
+            font-size: 0.85em;
+        }
+        
+        .cookie-buttons {
+            display: flex;
+            gap: 8px;
+            margin-left: 15px;
+        }
+        
+        .cookie-btn {
+            padding: 6px 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 0.8em;
+            transition: background-color 0.3s;
+        }
+        
+        .cookie-btn.accept {
+            background: #ffffff;
+            color: #000000;
+        }
+        
+        .cookie-btn.accept:hover {
+            background: #f0f0f0;
+        }
+        
+        .cookie-btn.decline {
+            background: #ffffff;
+            color: #000000;
+        }
+        
+        .cookie-btn.decline:hover {
+            background: #f0f0f0;
+        }
+        
+        /* Cookie Icon */
+        .cookie-icon {
+            position: fixed;
+            bottom: 40px;
+            left: 20px;
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            cursor: pointer;
+            z-index: 999;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+        }
+        
+        .cookie-icon:hover {
+            transform: scale(1.1);
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                background-size: cover;
+                background-position: center center;
+                background-attachment: fixed;
+                background-repeat: no-repeat;
+            }
+            .container {
+                padding: 10px;
+                max-width: 75%;
+                margin: 15px;
+            }
+            input[type="email"] {
+                width: 100%;
+                margin-bottom: 12px;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            input[type="submit"] {
+                width: 100%;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .thank-you-message {
+                 padding: 10px 15px;
+                 font-size: 0.85em;
+             }
+             
+            .cookie-content {
+                 flex-direction: column;
+                 text-align: center;
+             }
+             
+             .cookie-content p {
+                 font-size: 0.8em;
+                 margin-bottom: 8px;
+             }
+             
+             .cookie-buttons {
+                 margin-left: 0;
+                 margin-top: 8px;
+             }
+             
+            .cookie-btn {
+                padding: 5px 10px;
+                font-size: 0.75em;
+            }
+            
+            .cookie-icon {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 30px;
+                height: 30px;
+                font-size: 18px;
+                background: #ffffff;
+                color: #000000;
+                border-radius: 50%;
+                margin-right: 8px;
+                box-shadow: 0 2px 5px rgba(255, 255, 255, 0.3);
+            }
+            
+            .unmute-btn {
+                width: 24px;
+                height: 24px;
+                bottom: 15px;
+                left: 15px;
+            }
+            .unmute-btn i {
+                font-size: 14px;
+            }
+
+            .form-inline {
+                display: flex;
+                align-items: center;
+                height: 34px;
+                gap: 0;
+            }
+            .form-inline input[type="email"],
+            .form-inline input[type="submit"] {
+                width: auto;
+            }
+
+            .form-minimal {
+                display: inline-flex;
+                align-items: center;
+                height: 36px;
+            }
+            .form-minimal input[type="email"],
+            .form-minimal input[type="submit"] {
+                width: auto;
+            }
+         }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header removed as per request -->
+    
+    <!-- Cookie Consent Banner -->
+    <div id="cookieBanner" class="cookie-banner">
+        <div class="cookie-content">
+            <p>Questo sito utilizza cookies per migliorare la tua esperienza. Accetti l'uso dei cookies?</p>
+            <div class="cookie-buttons">
+                <button id="acceptCookies" class="cookie-btn accept">Accetta</button>
+                <button id="declineCookies" class="cookie-btn decline">Rifiuta</button>
+            </div>
+        </div>
+    </div>
+
+    <video id="bgVideo" src="herovideo.mp4" autoplay muted loop playsinline webkit-playsinline preload="auto" disablepictureinpicture disableremoteplayback oncontextmenu="return false"></video>
+
+    <div class="overlay"></div>
+
+    <button id="unmuteBtn" class="unmute-btn" aria-label="Attiva audio"><i id="unmuteIcon" class="fa-solid fa-volume-xmark" aria-hidden="true"></i></button>
+
+    <div class="top-logo">
+        <img src="logoleo.gif" alt="Logo" style="width: 100%; display: block; margin: 0 auto;">
+    </div>
+    
+    <div class="container">
+        <form action="https://formspree.io/f/xqadwdnk" method="POST" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; max-width: 400px; margin: 0 auto;">
+            
+            <div class="form-minimal">
+                <input type="email" name="email" placeholder="Enter your email here*" required>
+                <input type="submit" value="SUBMIT">
+            </div>
+            <input type="hidden" name="_subject" value="Nuova registrazione Con Calma">
+            <input type="hidden" name="_next" value="#">
+        </form>
+        
+        <div class="social-icons">
+            <a href="https://www.instagram.com/weheacreativestudio/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+        
+        <div class="thank-you-message">
+            <p>riceverai una mail appena saremo online</p>
+        </div>
+    </div>
+    
+    
+    </div>
+
+    <footer>
+        <div>Copyright © 2025 weheacreativestudio.com </div>
+        <div>Web by <a href="https://www.instagram.com/_matteomarino" target="_blank">Matteo Marino</a></div>
+    </footer>
+
+    <script>
+
+
+        
+        function checkCookieConsent() {
+            const consent = localStorage.getItem('cookieConsent');
+            if (!consent) {
+                setTimeout(() => {
+                    document.getElementById('cookieBanner').classList.add('show');
+                }, 1000);
+            }
+        }
+        
+        function acceptCookies() {
+            localStorage.setItem('cookieConsent', 'accepted');
+            document.getElementById('cookieBanner').classList.remove('show');
+        }
+        
+        function declineCookies() {
+            localStorage.setItem('cookieConsent', 'declined');
+            document.getElementById('cookieBanner').classList.remove('show');
+        }
+        
+        document.getElementById('acceptCookies').addEventListener('click', () => { acceptCookies(); requestAudio(); });
+        document.getElementById('declineCookies').addEventListener('click', () => { declineCookies(); requestAudio(); });
+        
+        window.addEventListener('load', checkCookieConsent);
+        
+        const video = document.getElementById('bgVideo');
+        const unmuteBtn = document.getElementById('unmuteBtn');
+        const unmuteIcon = document.getElementById('unmuteIcon');
+        const emailInput = document.querySelector('input[type="email"]');
+        
+        function attemptPlay(retries = 8) {
+            if (!video) return;
+            const p = video.play();
+            if (p && typeof p.catch === 'function') p.catch(() => {});
+            if (video.paused && retries > 0) {
+                setTimeout(() => attemptPlay(retries - 1), 300);
+            }
+        }
+
+        function updateUnmuteLabel() {
+            if (!unmuteBtn || !video || !unmuteIcon) return;
+            if (video.muted) {
+                unmuteIcon.className = 'fa-solid fa-volume-xmark';
+                unmuteBtn.setAttribute('aria-label', 'Attiva audio');
+            } else {
+                unmuteIcon.className = 'fa-solid fa-volume-high';
+                unmuteBtn.setAttribute('aria-label', 'Disattiva audio');
+            }
+        }
+
+        function requestAudio() {
+            if (!video) return;
+            video.muted = false;
+            const p = video.play();
+            if (p && typeof p.then === 'function') {
+                p.then(() => { updateUnmuteLabel(); }).catch(() => { video.muted = true; updateUnmuteLabel(); });
+            } else {
+                setTimeout(() => {
+                    if (video.paused) { video.muted = true; }
+                    updateUnmuteLabel();
+                }, 200);
+            }
+        }
+        
+        function muteAudio() {
+            if (!video) return;
+            video.muted = true;
+            updateUnmuteLabel();
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            if (video) {
+                video.setAttribute('muted', '');
+                video.setAttribute('playsinline', '');
+                video.setAttribute('webkit-playsinline', '');
+                video.muted = true;
+                video.loop = true;
+                video.playsInline = true;
+                video.autoplay = true;
+                video.currentTime = 0;
+                video.load();
+                attemptPlay();
+                requestAudio();
+                updateUnmuteLabel();
+            }
+            if (emailInput) {
+                emailInput.addEventListener('focus', muteAudio);
+                emailInput.addEventListener('click', muteAudio);
+                emailInput.addEventListener('input', muteAudio);
+            }
+        });
+        
+        if (video) {
+            video.addEventListener('canplay', () => {
+                attemptPlay();
+            });
+            video.addEventListener('pause', () => {
+                if (document.visibilityState === 'visible') {
+                    attemptPlay();
+                }
+            });
+            video.addEventListener('ended', () => {
+                video.currentTime = 0;
+                attemptPlay();
+            });
+            video.addEventListener('timeupdate', () => {
+                const d = video.duration;
+                if (d && isFinite(d) && d > 0 && video.currentTime >= d - 0.2) {
+                    video.currentTime = 0.01;
+                }
+            });
+        }
+        
+        document.addEventListener('visibilitychange', () => {
+            if (!document.hidden && video) {
+                attemptPlay();
+            }
+        });
+        
+        document.addEventListener('touchstart', () => {
+            if (video) {
+                attemptPlay();
+                requestAudio();
+            }
+        }, { once: true });
+
+        if (unmuteBtn) {
+            unmuteBtn.addEventListener('click', () => {
+                if (!video) return;
+                if (video.muted) { requestAudio(); } else { muteAudio(); }
+            });
+        }
+        
+        document.querySelector('form').addEventListener('submit', function(e) {
+            
+            const thankYouMessage = document.querySelector('.thank-you-message');
+            
+            thankYouMessage.style.display = 'block';
+            
+            setTimeout(() => {
+                thankYouMessage.style.display = 'none';
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
